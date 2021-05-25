@@ -1,7 +1,7 @@
 {
-  "name": "Asena UserBot",
-  "description": "Asena UserBot",
-  "logo": "https://i.hizliresim.com/1UoYoT.jpg",
+  "name": "D3vil Spammer UserBot",
+  "description": "D3vil Smapper UserBot made by @D3_krish join for query in telegram @D3VIL_SUPPORT",
+  "logo": "https://telegra.ph/file/e441ee749e930d4f99a6d.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -10,65 +10,66 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/quiec/AsenaUserbot",
-  "website":   "https://quiec.tech",
-  "success_url": "https://t.me/AsenaSupport",
+  "repository": "https://github.com/D3KRISH/D3VILSPAMMERSBOT",
+  "website":   "https://GitHub.com/D3KRISH/D3VILSPAMMERSBOT",
+  "success_url": "https://t.me/D3VIL_BOT_SUPPORT",
   "stack": "container",
   "env": {
     "API_KEY": {
-      "description": "Bu değeri my.telegram.org adresinden alın.",
+      "description": "Get this value from my.telegram.org! Putting other value may  result.In account ban",
+      "value": "" 
       "required": true
     },
     "API_HASH": {
-      "description": "Bu değeri my.telegram.org adresinden alın.",
+      "description": "GET this value form my.telegra.org! ",
       "required": true
     },
     "PLUGIN_CHANNEL_ID": {
-      "description": "İsteğe bağlıdır, almak için @AsenaKaliciPlugin",
+      "description": "put here plugin channel username ex:- @abcd",
       "required": false
     },
     "SPOTIFY_DC": {
-      "description": "Spotify bio için gerekli olan anahtar",
+      "description": "Key required for Spotify bio",
       "required": false
     },
     "SPOTIFY_KEY": {
-      "description": "Spotify bio için gerekli olan anahtar",
+      "description": "Key required for Spotify bio",
       "required": false
     },
     "STRING_SESSION": {
-      "description": "python3 GenerateStringSession.py dosyasını yerel olarak çalıştırarak bu değeri alın.",
+      "description": "python3 GenerateStringSession.py https://replit.com/@D3krish/D3VILSTRINGSESSION-1#main.py.",
       "required": true
     },
     "HEROKU_MEMEZ": {
-      "description": "UserBot bir Heroku Dyno üzerinde çalışıyorsa, bu değer True olmalıdır.",
+      "description": "If the UserBot is running on a Heroku Dyno, this value should be True.",
       "value": "True",
       "required": true
     },
     "HEROKU_APIKEY": {
-      "description": "Heroku API Key, 'https://dashboard.heroku.com/account' adresinden alın.",
+      "description": "Heroku API Key, 'https://dashboard.heroku.com/account', scroll down and press Reveal API.Required for updater to work.",
       "value": ""
     },
     "HEROKU_APPNAME": {
-      "description": "Heroku uygulama adını buraya ekleyin. UserBot güncellemelerine yardımcı olur.",
+      "description": "The Value of App Name you filled in right on top.Required for updater to work.",
       "required": true
     },
     "UPSTREAM_REPO_URL": {
-      "description": "Fork sağlamanız durumunda repo URL'nizi buraya ekleyin. Varsayılan olarak kendi repo adresimiz eklidir.",
-      "value": "https://github.com/Quiec/AsenaUserBot",
+      "description": "In case you provide fork, add your repo URL here. By default, our repo address is attached.",
+      "value": "https://github.com/D3KRISH/D3VILSPAMMERBOT",
       "required": true
     },
     "COUNTRY": {
-      "description": "Ülkenizi .time ve .date komutlarında kullanılacak şekilde ayarlayın. Varsayılan olarak Türkiye ayarlanmıştır.",
+      "description": "Set your country to be used in the .time and .date commands. Turkey is set by default.",
       "value": "Turkey",
       "required": false
     },
     "TZ_NUMBER": {
-      "description": "Ülkenizde birden fazla Saat Dilimi olması durumunda bu değeri değiştirin.",
+      "description": "Change this value if your country has more than one Time Zone.",
       "value": "1",
       "required": false
     },
     "TZ": {
-      "description": "Bunun ne işe yaradığı hakkında fikrin yoksa kurcalama :)",
+      "description": "If you have no idea what this is for, don't poke it:)",
       "value": "Europe/Istanbul",
       "required": true  
     },
@@ -78,7 +79,7 @@
       "required": false
     },
     "GOOGLE_CHROME_BIN": {
-      "description": "Selenium tabanlı modüller için Google Chrome (veya) Chromium binary konumu.",
+      "description": "For Carbon.py. Leave as it is.",
       "value": "/usr/bin/chromium-browser",
       "required": false
     },
@@ -91,143 +92,143 @@
       "value": "False"
     },
     "BOT_USERNAME": {
-      "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun kullanıcı adınız yazmanız lazım (Örnek: @QuiecBot). Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
+      "description": "Needed for inline buttons maker. Make a bot at @BotFather and get the username of your bot.",
       "required": false  
     },
     "BOT_TOKEN": {
-      "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun tokenini yazmanız lazım. Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
+      "description": "Needed for inline buttons maker. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the token of your bot. And Don't Forget To Turn on inline Mode on bot settings. Get it.",
       "required": false    
     },
     "GENIUS": {
-      "description": "Buraya aldığınız Genius API Token'i yazın.",
+      "description": "Type the Genius API Token you received here.",
       "required": false
     },
     "AUTO_PP": {
-      "description": "Autopp modülünün çalışması için gerekli olan değişkendir. Çalışması için kullanacağınız resmin direk adresini girmeniz gerekiyor.",
+      "description": "It is the variable required for the Autopp module to run. You have to enter the direct address of the picture you will use for it to work.",
       "required": false      
     },
     "BOTLOG_CHATID": {
-      "description": "Günlük grubunun ChatID'si. BOTLOG= False ve / veya LOGSPAMMER= False ise '0' olarak ayarlayın.",
+      "description": "It is the variable required for the Autopp module to run. You have to enter the direct address of the picture you will use for it to work.",
       "value": "0"
     },
     "CONSOLE_LOGGER_VERBOSE": {
-      "description": "Konsol günlüğünde ayrıntıya ihtiyacınız varsa, bunu True olarak ayarlayın.",
+      "description": "Set this to True if you need details in the console log.",
       "value": "False"
     },
     "PM_AUTO_BAN": {
-      "description": "PM Otomatik Yasaklama Özelliği. 'Hey! Bu bir bot.' modülüdür.",
+      "description": "PM Auto Ban Feature. 'Hey! This is a bot.' module.",
       "value": "False"
     },
     "PM_AUTO_BAN_LIMIT": {
-      "description": "PM Auto Ban limiti. Size kullanıcı x mesaj atarsa engellencek.",
+      "description": "PM Auto Ban limit. It will be blocked if the user sends x messages to you.",
       "value": "4",
       "required": false
     },
     "YOUTUBE_API_KEY": {
-      "description": ".yt komutu için YouTube Veri API'sı keyidir. https://console.cloud.google.com adresinden alın.",
+      "description": ".The YouTube Data API for the .yt command is key. Get it from https://console.cloud.google.com.",
       "required": false
     },
     "OCR_SPACE_API_KEY": {
-      "description": ".ocr komutu için OCR API Key. https://ocr.space/ocrapi adresinden alın.",
+      "description": "OCR API Key for the ocr Get. https://ocr.space/ocrapi adresinden alın.",
       "required": false
     },
     "REM_BG_API_KEY": {
-      "description": ".rbg komutu için API Key. https://www.remove.bg/api adresinden alın.",
+      "description": "API Key for the rbg command. Get it from. https://www.remove.bg/api adresinden alın.",
       "required": false
     },
     "ANTI_SPAMBOT": {
-      "description": "Katıldıktan sonra gruplardan spambotları tekmeliyor. [Tekmelemek için yönetici yetkileri gerektirir]",
+      "description": "After joining, he kicks spambots from groups. [Requires administrator privileges to kick]",
       "value": "False"
     },
     "ANTI_SPAMBOT_SHOUT": {
-      "description": "Tekme atmak için yönetici yetkileriniz yoksa spambotları gruba katıldıktan sonra yöneticilere rapor edin.",
+      "description": "Report spambots to admins after joining the group if you don't have administrator privileges to kick.",
       "value": "False"
     },
     "TMP_DOWNLOAD_DIRECTORY": {
-      "description": "Birçok modül için indirme konumu (GDrive, .download vb..)",
+      "description": "Download location for many modules (GDrive, .download etc ..)",
       "value": "./downloads/"
     },
     "CLEAN_WELCOME": {
-      "description": "Yeni bir kişi katıldığında, eski karşılama mesajı silinir.",
+      "description": "When a new person joins, the old welcome message is deleted.",
       "value": "True"
     },
     "G_DRIVE_CLIENT_ID": {
-      "description": "Google Drive için client id girin.",
+      "description": "Enter the client id for Google Drive.",
       "required": false
     },
     "LASTFM_API": {
-      "description": "Last.FM modülü için API Key. [Şuradan bir tane alın - https://www.last.fm/api/account/create]",
+      "description": "SECRET Key for the Last.FM module. [Get one here - https://www.last.fm/api/account/create]",
       "required": false
     },
     "LASTFM_SECRET": {
-      "description": "Last.FM modülü için SECRET Key. [Şuradan bir tane alın - https://www.last.fm/api/account/create]",
+      "description": "SECRET Key for the Last.FM module. [Get one here - https://www.last.fm/api/account/create]",
       "required": false
     },
     "LASTFM_USERNAME": {
-      "description": "Last.FM Kullanıcı adı",
+      "description": "Last.FM Username",
       "required": false
     },
     "LASTFM_PASSWORD": {
-      "description": "Last.FM Şifre",
+      "description": "Last.FM Password",
       "required": false
     },
     "BIO_PREFIX": {
-      "description": "Last.FM Modülü Biyografi için önek.",
+      "description": "Prefix for Last.FM Module Biography.",
       "required": false
     },
     "DEFAULT_BIO": {
-      "description": "Varsayılan profil biyografisi.",
-      "value": "@AsenaUserBot",
+      "description": "Default profile bio.",
+      "value": "⚔️ȴꬴꬶꬴꬼɖᶏꭉỿ ꝍƒ ȶꬴᶏꬺ ɖ3ⱱᶖȴ⚔️",
       "required": false
     },
     "G_DRIVE_CLIENT_SECRET": {
-      "description": "Google Drive için client secret girin.",
+      "description": "Enter the client secret for Google Drive.",
       "required": false
     },
     "G_DRIVE_AUTH_TOKEN_DATA": {
-      "description": "Google Drive kimlik doğrulama verilerini JSON yapısı olarak girin.",
+      "description": "Enter Google Drive authentication data as JSON structure.",
       "required": false
     },
     "LYDIA_API_KEY": {
-      "description": "Bu modülün çalışması için CoffeeHouse API'sine ihtiyacı var. 'https://coffeehouse.intellivoid.info/dashboard' Buradan alabilirsiniz.",
+      "description": "This module needs the CoffeeHouse API to work. 'https://coffeehouse.intellivoid.info/dashboard' You can get it here.",
       "required": false
     },
     "WEATHER_DEFCITY": {
-      "description": "UserBot'un hava durumu modülü için varsayılan şehri ayarlayın.",
+      "description": "Set the default city for the weather module of UserBot.",
       "required": false
     },
     "LOGSPAMMER": {
-      "description": "Hata günlüklerinin, geçerli sohbette dosyayı göndermesi yerine UserBot günlük grubunda saklanmasını istemeniz durumunda bu değeri True olarak ayarlayın. Geçerli bir BOTLOG_CHATID değerinin ayarlanmasını gerektirir.",
+      "description": "Set this value to True if you want error logs to be stored in the UserBot log group instead of sending the file in the current chat. Requires a valid BOTLOG_CHATID value to be set.",
       "value": "False"
     },
     "WARN_LIMIT": {
-      "description": "Kişiyi gmutelemek/gbanlamak için gerekli uyarı sayısı. Genellikle 3 kullanılır.",
+      "description": "The number of warnings required to gimme / ban the person Usually 3 is used.",
       "value": "3",
       "required": false
     },
     "WARN_MODE": {
-      "description": "3 uyarıdan sonra gerçekleşecek olay. Sadece gmute ya da gban yazabilirsiniz. Aksi takdirde bot çalışmayabilir.",
+      "description": "The event that will occur after 3 warnings. You can just type gmute or gban. Otherwise, the bot may not work.",
       "value": "gmute",
       "required": false
     },
     "GALERI_SURE": {
-      "description": "Galeri plugini içindir. Profil fotoğrafları kaç saniye de bir değişsin?",
+      "description": "It is for the gallery plugin. How many seconds should the profile photos change?",
       "value": "60",
       "required": false
     },
     "PAKET_ISMI": {
-      "description": "Dızla komutu paket ismini belirleyin. Paket ismi şöyle olacaktır: @KullanıcıAdın verdiğin değer 1",
-      "value": "@AsenaUserBot Paketi",
+      "description": "Set the edit command package name. The name of the package will be: @ UserName the value you give is 1 ",
+      "value": "@D3VIL_SUPPORT",
       "required": false
     },
     "OTOMATIK_KATILMA": {
-      "description": "Support grubuna ve Kanal'a otomatik katılmak istemiyorsanız False yazın.",
+      "description": "If you do not want to join the Support group and Channel automatically, type False..",
       "value": "True",
       "required": true
     },
     "LANGUAGE": {
       "description": "Botun dili. EN/TR/AZ yazabilirsiniz.",
-      "value": "TR",
+      "value": "EN",
       "required": true
     }
   },
