@@ -115,7 +115,7 @@ async def ekle(event):
 
 @register(outgoing=True, pattern="^.gban(?: |$)(.*)")
 async def gbanspider(gspdr):
-    """ .gban komutu belirlenen kişiyi küresel olarak yasaklar """
+    """ .gban bans the specified person globally """
     # Yetki kontrolü
     chat = await gspdr.get_chat()
     admin = chat.admin_rights
@@ -195,7 +195,7 @@ async def gbanmsg(moot):
 
 @register(outgoing=True, pattern="^.ungban(?: |$)(.*)")
 async def ungban(un_gban):
-    """ .ungban komutu belirlenen kişinin küresel susturulmasını kaldırır """
+    """ .ungban command removes global ban of the specified person """
     # Yetki kontrolü
     chat = await un_gban.get_chat()
     admin = chat.admin_rights
@@ -237,7 +237,7 @@ async def ungban(un_gban):
 
 @register(outgoing=True, pattern="^.setgpic$")
 async def set_group_photo(gpic):
-    """ .setgpic komutu ile grubunuzun fotoğrafını değiştirebilirsiniz """
+    """ .setgpic You can change the photo of your group with the command """
     if not gpic.is_group:
         await gpic.edit(LANG['PRIVATE'])
         return
@@ -274,7 +274,7 @@ async def set_group_photo(gpic):
 
 @register(outgoing=True, pattern="^.promote(?: |$)(.*)")
 async def promote(promt):
-    """ .promote komutu ile belirlenen kişiyi yönetici yapar """
+    """ .promote makes the person administration with the command as manager """
     # Hedef sohbeti almak
     chat = await promt.get_chat()
     # Yetkiyi sorgula
@@ -324,7 +324,7 @@ async def promote(promt):
 
 @register(outgoing=True, pattern="^.demote(?: |$)(.*)")
 async def demote(dmod):
-    """ .demote komutu belirlenen kişiyi yöneticilikten çıkarır """
+    """ .demote remove the person administration with the command as manager """
     # Yetki kontrolü
     chat = await dmod.get_chat()
     admin = chat.admin_rights
@@ -373,7 +373,7 @@ async def demote(dmod):
 
 @register(outgoing=True, pattern="^.ban(?: |$)(.*)")
 async def ban(bon):
-    """ .ban komutu belirlenen kişiyi gruptan yasaklar """
+    """ .ban bans the specified person from the group """
     # Yetki kontrolü
     chat = await bon.get_chat()
     admin = chat.admin_rights
@@ -440,7 +440,7 @@ async def ban(bon):
 
 @register(outgoing=True, pattern="^.unban(?: |$)(.*)")
 async def nothanos(unbon):
-    """ .unban komutu belirlenen kişinin yasağını kaldırır """
+    """ .unban unbans the specified person from the group """
     # Yetki kontrolü
     chat = await unbon.get_chat()
     admin = chat.admin_rights
@@ -485,7 +485,8 @@ async def nothanos(unbon):
 @register(outgoing=True, pattern="^.mute(?: |$)(.*)")
 async def spider(spdr):
     """
-    Bu fonksiyon temelde susturmaya yarar
+    This function is mainly used for mute.
+    
     """
     # Fonksiyonun SQL modu altında çalışıp çalışmadığını kontrol et
     try:
@@ -567,7 +568,7 @@ async def mutmsg(spdr, user, reason, chat):
 
 @register(outgoing=True, pattern="^.unmute(?: |$)(.*)")
 async def unmoot(unmot):
-    """ .unmute komutu belirlenin kişinin sesini açar (yani grupta tekrardan konuşabilir) """
+    """ .unmute unmute the specified person (i.e. she can speak again in the group) """
     # Yetki kontrolü
     chat = await unmot.get_chat()
     admin = chat.admin_rights
@@ -632,7 +633,7 @@ async def unmoot(unmot):
 
 @register(incoming=True)
 async def muter(moot):
-    """ Sessize alınan kullanıcıların mesajlarını silmek için kullanılır """
+    """ Used to delete messages of muted users """
     try:
         from userbot.modules.sql_helper.spam_mute_sql import is_muted
         from userbot.modules.sql_helper.gmute_sql import is_gmuted
@@ -666,7 +667,7 @@ async def muter(moot):
 
 @register(outgoing=True, pattern="^.ungmute(?: |$)(.*)")
 async def ungmoot(un_gmute):
-    """ .ungmute komutu belirlenen kişinin küresel susturulmasını kaldırır """
+    """ .ungmute command removes global mute of the specified person """
     # Yetki kontrolü
     chat = await un_gmute.get_chat()
     admin = chat.admin_rights
@@ -708,7 +709,7 @@ async def ungmoot(un_gmute):
 
 @register(outgoing=True, pattern="^.gmute(?: |$)(.*)")
 async def gspider(gspdr):
-    """ .gmute komutu belirlenen kişiyi küresel olarak susturur """
+    """ .gmute mute the specified person globally """
     # Yetki kontrolü
     chat = await gspdr.get_chat()
     admin = chat.admin_rights
@@ -823,7 +824,7 @@ async def rm_deletedacc(show):
 
 @register(outgoing=True, pattern="^.admins$")
 async def get_admin(show):
-    """ .admins komutu girilen gruba ait yöneticileri listeler """
+    """ .admins List the administrators belonging to the group for which the command was entered """
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "this chat"
     mentions = f'<b>{title} {LANG["ADMINS"]}:</b> \n'
@@ -843,7 +844,7 @@ async def get_admin(show):
 
 @register(outgoing=True, pattern="^.pin(?: |$)(.*)")
 async def pin(msg):
-    """ .pin komutu verildiği grupta ki yazıyı & medyayı sabitler """
+    """ .pin fixes the text & media in the group where the command is given """
     # Yönetici kontrolü
     chat = await msg.get_chat()
     admin = chat.admin_rights
@@ -888,7 +889,7 @@ async def pin(msg):
 
 @register(outgoing=True, pattern="^.kick(?: |$)(.*)")
 async def kick(usr):
-    """ .kick komutu belirlenen kişiyi gruptan çıkartır """
+    """ .kick kick the specified person from the group """
     # Yetki kontrolü
     chat = await usr.get_chat()
     admin = chat.admin_rights
@@ -937,7 +938,7 @@ async def kick(usr):
 
 @register(outgoing=True, pattern="^.users ?(.*)")
 async def get_users(show):
-    """ .users komutu girilen gruba ait kişileri listeler """
+    """ .users List the people belonging to the group for which the command was entered """
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "this chat"
     mentions = '{} grubunda bulunan kişiler: \n'.format(title)
@@ -976,7 +977,7 @@ async def get_users(show):
 
 
 async def get_user_from_event(event):
-    """ Kullanıcıyı argümandan veya yanıtlanan mesajdan alın. """
+    """ Take the user from the argument or the replied message. """
     args = event.pattern_match.group(1).split(' ', 1)
     extra = None
     if event.reply_to_msg_id and not len(args) == 2:
@@ -1026,7 +1027,7 @@ async def get_user_from_id(user, event):
 
 @register(outgoing=True, pattern="^.unwarn ?(.*)")
 async def unwarn(event):
-    """ .unwarn kullanıcıyı uyarıyı kaldırmaya işe yarar """
+    """ .unwarn helps user to remove warning """
     # Yetki kontrolü
     chat = await event.get_chat()
     admin = chat.admin_rights
@@ -1069,7 +1070,7 @@ async def unwarn(event):
 
 @register(outgoing=True, pattern="^.warn ?(.*)")
 async def warn(event):
-    """ .warn kullanıcıyı uyarmaya işe yarar """
+    """ .warn alert that your to given this command """
     # Yetki kontrolü
     chat = await event.get_chat()
     admin = chat.admin_rights
@@ -1118,7 +1119,7 @@ async def warn(event):
 
 async def Warn_Gmute(event, warn, user, reason = None):
     await event.delete()
-    yeni = await event.reply(f"`Seni yeteri kadar uyardım` [{user.first_name}](tg://user?id={user.id})`, küresel olarak susturuldun!`")
+    yeni = await event.reply(f"`I warned you enough` [{user.first_name}](tg://user?id={user.id})`, küresel olarak susturuldun!`")
 
     try:
         from userbot.modules.sql_helper.gmute_sql import gmute
@@ -1126,16 +1127,16 @@ async def Warn_Gmute(event, warn, user, reason = None):
         await yeni.edit(NO_SQL)
         return
         
-    yeni2 = await yeni.reply("`Susturuluyor...`")
+    yeni2 = await yeni.reply("`Silencing...`")
         
     if gmute(user.id) == False:
         await yeni2.edit(
-            '`Hata! Kullanıcı zaten küresel olarak susturuldu.`')
+            '`Oops! User is already globally muted.`')
     else:
         if reason != None:
-            await yeni2.edit(f"`Kullanıcı küresel olarak susturuldu!`Nedeni: {reason}")
+            await yeni2.edit(f"`User muted globally!'Cause: {reason}")
         else:
-            await yeni2.edit("`Kullanıcı küresel olarak susturuldu!`")
+            await yeni2.edit("`globally silenced`")
 
         if BOTLOG:
             await event.client.send_message(
@@ -1154,16 +1155,16 @@ async def Warn_Gban(event, warn, user, reason = None):
         await yeni.edit(NO_SQL)
         return
         
-    yeni2 = await yeni.reply("`Yasaklanıyor...`")
+    yeni2 = await yeni.reply("`Banning...`")
         
     if gban(user.id) == False:
         await yeni2.edit(
-            '`Hata! Kullanıcı zaten küresel olarak yasaklandı.`')
+            '`Ops! The user has already been banned globally.`')
     else:
         if reason != None:
-            await yeni2.edit(f"`Kullanıcı küresel olarak yasaklandı!`Nedeni: {reason}")
+            await yeni2.edit(f"`User banned globally!'Reason: {reason}")
         else:
-            await yeni2.edit("`Kullanıcı küresel olarak yasaklandı!`")
+            await yeni2.edit("`The user has been banned globally!`")
 
         if BOTLOG:
             await event.client.send_message(
@@ -1174,10 +1175,10 @@ async def Warn_Gban(event, warn, user, reason = None):
 
 @register(outgoing=True, pattern="^.usersdel ?(.*)")
 async def get_usersdel(show):
-    """ .usersdel komutu grup içinde ki silinen hesapları gösterir """
+    """ .usersdel command shows deleted accounts within the group """
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "this chat"
-    mentions = '{} grubunda bulunan silinmiş hesaplar: \n'.format(title)
+    mentions = '{} deleted accounts in the group: \n'.format(title)
     try:
         if not show.pattern_match.group(1):
             async for user in show.client.iter_participants(show.chat_id):
@@ -1199,21 +1200,21 @@ async def get_usersdel(show):
         await show.edit(mentions)
     except MessageTooLongError:
         await show.edit(
-            "Lanet olsun, bu büyük bir grup. Silinen kullanıcılar listesini dosya olarak gönderiyorum.")
+            "Damn, this is a big group. I'm sending the deleted users list as a file.")
         file = open("userslist.txt", "w+")
         file.write(mentions)
         file.close()
         await show.client.send_file(
             show.chat_id,
             "deleteduserslist.txt",
-            caption='{} grubuna ait olan silinmiş hesaplar:'.format(title),
+            caption='{} Accounts deleted belonging to the group:'.format(title),
             reply_to=show.id,
         )
         remove("deleteduserslist.txt")
 
 
 async def get_userdel_from_event(event):
-    """ Silinen kullanıcıyı argümandan veya yanıtlanan mesajdan alın. """
+    """ Retrieve deleted user from argument or replied message. """
     args = event.pattern_match.group(1).split(' ', 1)
     extra = None
     if event.reply_to_msg_id and not len(args) == 2:
@@ -1264,10 +1265,10 @@ async def get_userdel_from_id(user, event):
 
 @register(outgoing=True, pattern="^.bots$", groups_only=True)
 async def get_bots(show):
-    """ .bots komutu gruba ait olan botları listeler """
+    """ .bots lists bots that belong to the group """
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "this chat"
-    mentions = f'<b> {title} grubunda bulunan botlar:</b>\n'
+    mentions = f'<b> {title} Bots in group:</b>\n'
     try:
        # if isinstance(message.to_id, PeerChat):
         #    await show.edit("`Sadece süper grupların botlara sahip olabileceğini duydum.`")
@@ -1300,45 +1301,45 @@ async def get_bots(show):
         remove("botlist.txt")
 
 CmdHelp('admin').add_command(
-        'promote', '<kullanıcı adı/yanıtlama> <özel isim (isteğe bağlı)>', 'Sohbetteki kişiye yönetici hakları sağlar.'
+        'promote', '<username / reply> <custom name (optional)>', 'Provides admin rights to the person in the chat.'
     ).add_command(
-        'demote', '<kullanıcı adı/yanıtlama>', 'Sohbetteki kişinin yönetici izinlerini iptal eder.'
+        'demote', '<username/reply>', 'Revokes admin permissions of the person in chat.'
     ).add_command(
-        'ban', '<kullanıcı adı/yanıtlama> <nedeni (isteğe bağlı)>', 'Sohbetteki kişiyi susturur, yöneticilerde de çalışır.'
+        'ban', '<username/reply> <reason (optional)>', 'Silences person in chat, also works with admins.'
     ).add_command(
-        'unban', '<kullanıcı adı/yanıtlama>', 'Sohbetteki kişinin yasağını kaldırır.'
+        'unban', '<username/reply>', 'Removes the ban on the person in the chat.'
     ).add_command(
-        'kick', '<kullanıcı adı/yanıtlama> <nedeni (isteğe bağlı)>', 'Gruptan belirttiğiniz kişiyi tekmeler.'
+        'kick', '<username/reply> <reason (optional)>', 'Kicks the person you specified from the group.'
     ).add_command(
-        'gmute', '<kullanıcı adı/yanıtlama> <nedeni (isteğe bağlı)>', 'Kişiyi yönetici olduğunuz tüm gruplarda susturur.'
+        'gmute', '<username/reply> <reason (optional)>', 'gban the person you specified from the groups.'
     ).add_command(
-        'ungmute', '<kullanıcı adı/yanıtlama>', 'Kişiyi küresel olarak sessize alınanlar listesinden kaldırır.'
+        'ungmute', '<username/reply>', 'remove gban the person you specified from tha groups.'
     ).add_command(
-        'zombies', None, 'Bir gruptaki silinmiş hesapları arar. Gruptan silinen hesapları kaldırmak için .zombies clean komutunu kullanın.'
+        'zombies', None, 'Searches for deleted accounts in a group. Use the .zombies clean command to remove accounts deleted from the group.'
     ).add_command(
-        'admins', None, 'Sohbet yöneticilerinin listesini alır.'
+        'admins', None, 'Retrieves the list of chat administration.'
     ).add_command(
-        'bots', None, 'Bir gruptaki silinmiş hesapları arar. Gruptan silinen hesapları kaldırmak için .zombies clean komutunu kullanın.'
+        'bots', None, 'Searches for deleted accounts in a group. Use the .zombies clean command to remove accounts deleted from the group.'
     ).add_command(
-        'users veya .users', '<kullanıcı adı> <kullanıcı adı/yanıtlama>', 'Sohbetteki tüm (veya sorgulanan) kullanıcıları alır.'
+        'users veya .users', '<username> <username/reply>', 'Retrieves all (or queried) users in the chat.'
     ).add_command(
-        'setgppic', '<yanıtlanan resim>', 'Grubun resmini değiştirir.'
+        'setgppic', '<picture answered>', 'It changes the picture of the group.'
     ).add_command(
-        'warn', '<kullanıcı adı/yanıtlamma> <sebep (isteğe bağlı>', 'Belirttiğiniz kullanıcıyı uyarır.'
+        'warn', '<username/reply> <reason (optional>', 'It warns the user you specifie.'
     ).add_command(
-        'unwarn', '<kullanıcı adı/yanıtlamma> <sebep (isteğe bağlı>', 'Belirttiğiniz kullanıcının uyarısını kaldırır.'
+        'unwarn', '<username/reply> <reason (optional>', 'It help to remove warns the user you specifie.'
     ).add_command(
-        'warn', '<kullanıcı adı/yanıtlamma> <sebep (isteğe bağlı>', 'Belirttiğiniz kullanıcıyı uyarır.'
+        'warn', '<username/reply> <reason (opstional>', 'It warns the user you specifie.'
     ).add_command(
-        'usersdel', None, 'Grup içerisinde silinen hesapları göstürür.'
+        'usersdel', None, 'Shows accounts deleted within the group.'
     ).add_command(
-        'ekle', '<kullanıcı ad(lar)ı>', 'Gruba üye ekler.'
+        'ekle', '<username(s)>', 'Adds members to the group.'
     ).add_command(
-        'gban', '<kullanıcı adı/yanıtlama>', 'Kullanıcıyı küresel olarak yasaklar.'
+        'gban', '<username/reply>', 'It gban the person you specified the groups.'
     ).add_command(
-        'ungban', '<kullanıcı adı/yanıtlama>', 'Kullanıcının küresel yasaklamasını kaldırır.'
+        'ungban', '<username/reply>', 'It help to remove gban the person you specified the groups.'
     ).add_command(
-        'pin', '<yanıtlama>', 'Yanıt verdiğiniz mesajı başa sabitler.'
+        'pin', '<reply>', 'Fixes/notify the message you reply to the beginning.'
     ).add_command(
-        'setgpic', '<yanıtlama>', 'Grup fotoğrafını değiştirir.'
+        'setgpic', '<reply>', 'Changes the group photo.'
     ).add()
