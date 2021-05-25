@@ -1,15 +1,15 @@
-# Copyright (C) 2020 Yusuf Usta.
+# Copyright (C) 2020 D3KRISH.
 #
 # Licensed under the GPL-3.0 License;
 # you may not use this file except in compliance with the License.
 #
 
-# Asena UserBot - Yusuf Usta
+# D3VIL UserBot - D3KRISH
 from userbot import PATTERNS, CMD_HELP, CMD_HELP_BOT
 
 class CmdHelp:
     """
-    Komut yardımlarını daha iyi üretmek için yazdığım sınıf.
+    The class I wrote to better produce command aids.
     """
 
     FILE = ""
@@ -59,7 +59,7 @@ class CmdHelp:
         Sonuç getirir.
         """
 
-        result = f"**📗 Dosya:** `{self.FILE}`\n"
+        result = f"**📗 File:** `{self.FILE}`\n"
         if self.WARNING == '' and self.INFO == '':
             result += f"**⬇️ Official:** {'✅' if self.IS_OFFICIAL else '❌'}\n\n"
         else:
@@ -67,24 +67,24 @@ class CmdHelp:
             
             if self.INFO == '':
                 if not self.WARNING == '':
-                    result += f"**⚠️ Uyarı:** {self.WARNING}\n\n"
+                    result += f"**⚠️ Warning:** {self.WARNING}\n\n"
             else:
                 if not self.WARNING == '':
-                    result += f"**⚠️ Uyarı:** {self.WARNING}\n"
+                    result += f"**⚠️ Warning:** {self.WARNING}\n"
                 result += f"**ℹ️ Info:** {self.INFO}\n\n"
                      
         for command in self.COMMANDS:
             command = self.COMMANDS[command]
             if command['params'] == None:
-                result += f"**🛠 Komut:** `{PATTERNS[:1]}{command['command']}`\n"
+                result += f"**🛠 command:** `{PATTERNS[:1]}{command['command']}`\n"
             else:
-                result += f"**🛠 Komut:** `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
+                result += f"**🛠 command:** `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
                 
             if command['example'] == None:
-                result += f"**💬 Açıklama:** `{command['usage']}`\n\n"
+                result += f"**💬 Explanation:** `{command['usage']}`\n\n"
             else:
-                result += f"**💬 Açıklama:** `{command['usage']}`\n"
-                result += f"**⌨️ Örnek:** `{PATTERNS[:1]}{command['example']}`\n\n"
+                result += f"**💬 Explanation:** `{command['usage']}`\n"
+                result += f"**⌨️ Sample:** `{PATTERNS[:1]}{command['example']}`\n\n"
         return result
 
     def add(self):
@@ -97,9 +97,9 @@ class CmdHelp:
     
     def getText(self, text : str):
         if text == 'REPLY_OR_USERNAME':
-            return '<kullanıcı adı> <kullanıcı adı/yanıtlama>'
+            return '<username> <username / reply>'
         elif text == 'OR':
-            return 'veya'
+            return 'OR'
         elif text == 'USERNAMES':
-            return '<kullanıcı ad(lar)ı>'
+            return '<username (s)>'
         
