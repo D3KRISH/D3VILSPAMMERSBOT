@@ -20,11 +20,11 @@
 
 ### The Easy Way
 
-<h4>⚜️ DEPLOY TO HEROKU ⚜️</h4>
+<h4>⚔️ DEPLOY TO HEROKU ⚔️</h4>
 
-<a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FD3KRISH%2FD3VIL-BOT&template=https%3A%2F%2Fgithub.com%2FD3KRISH%2FD3VIL-BOT" rel="nofollow" style="background-color: initial; box-sizing: border-box; color: #0366d6; text-decoration-line: none;"><img alt="Deploy" data-canonical-src="https://www.herokucdn.com/deploy/button.svg" src="https://camo.githubusercontent.com/83b0e95b38892b49184e07ad572c94c8038323fb/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e737667" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
+<a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FD3KRISH%2FD3VILSPAMMMERSBOT&template=https%3A%2F%2Fgithub.com%2FD3KRISH%2FD3VILSPAMMERSBOT" rel="nofollow" style="background-color: initial; box-sizing: border-box; color: #0366d6; text-decoration-line: none;"><img alt="Deploy" data-canonical-src="https://www.herokucdn.com/deploy/button.svg" src="https://camo.githubusercontent.com/83b0e95b38892b49184e07ad572c94c8038323fb/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e737667" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
 
-<h2 align="center"> <a href="https://github.com/D3KRISH/D3VIL-BOT">⚡ 𝔻𝟛𝕍𝕀𝕃 𝔹𝕆𝕋 ⚡</a></h2>
+<h2 align="center"> <a href="https://github.com/D3KRISH/D3VILSPAMMERSBOT">⚔️ 𝔻𝟛𝕍𝕀𝕃 𝕊ℙ𝔸𝕄𝕄𝔼ℝ 𝔹𝕆𝕋 ⚔️</a></h2>
 
 ## [STRING_SESSION](https://replit.com/@D3krish/D3VILSTRINGSESSION-1#main.py)
 
@@ -42,7 +42,7 @@
 
 ```
 Get help regarding setting up 
-your D3VIL BOT in our official 
+your D3VIL SPAMMERS BOT in our official 
 support Group and get updates
 notifications in Update Channel.
 ```
@@ -57,8 +57,8 @@ notifications in Update Channel.
   <summary> <h2>Generate String Session</h2> </summary>
 
 - Termux
-    - Clone `git clone https://github.com/D3KRISH/D3VIL-BOT.git`
-    - Then Do  `cd D3VIL-BOT`
+    - Clone `git clone https://github.com/D3KRISH/D3VILSPAMMERSBOT.git`
+    - Then Do  `cd D3VILSPAMMERBOT`
     - Run String Generator By
            `bash string.sh`
     - Then Fill The Required Details.
@@ -108,7 +108,7 @@ notifications in Update Channel.
 
 Copyright (C) 2021 D3KRISH
 
-Poject [D3VIL_BOT](https://github.com/D3KRISH/D3VIL-BOT) is free software: you can redistribute it and/or modify
+Poject [D3VIL_BOT](https://github.com/D3KRISH/D3VILSPAMMERSBOT) is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
