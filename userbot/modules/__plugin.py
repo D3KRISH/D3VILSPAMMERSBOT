@@ -1,10 +1,10 @@
-# Copyright (C) 2020 Yusuf Usta.
+# Copyright (C) 2020 D3KRISH.
 #
 # Licensed under the  GPL-3.0 License;
 # you may not use this file except in compliance with the License.
 #
 
-# Asena UserBot - Yusuf Usta
+# D3VIL UserBot - D3KRISH
 
 import re
 import os
@@ -166,7 +166,7 @@ async def pins(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Modül başarıyla yüklendi!**\n__Modülun komutları ve kullanım hakkında bilgi almak için__ `.asena {cmdhelp}` __yazınız.__')
+                return await event.edit(f'**Module loaded successfully!**\n__To get information about the commands and usage of the module__ `.d3vil {cmdhelp}` __type.__')
             else:
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
                 userbot.cmdhelp.CmdHelp(dosya).add_warning('Komutlar bulunamadı!').add()
@@ -175,12 +175,12 @@ async def pins(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Modül başarıyla yüklendi!**\n__Modülun komutları ve kullanım hakkında bilgi almak için__ `.asena {cmdhelp}` __yazınız.__')
+                return await event.edit(f'**Module loaded successfully!**\n__To get information about the commands and usage of the module__ `.d3vil {cmdhelp}` __type.__')
             else:
                 dosyaAdi = reply_message.file.name.replace('.py', '')
                 extractCommands(dosya)
                 await reply_message.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Modül başarıyla yüklendi!**\n__Modülun komutları ve kullanım hakkında bilgi almak için__ `.asena {dosyaAdi}` __yazınız.__')
+                return await event.edit(f'**Module loaded successfully!**\n__Modülun komutları ve kullanım hakkında bilgi almak için__ `.d3vil {dosyaAdi}` __type.__')
 
 @register(outgoing=True, pattern="^.premove ?(.*)")
 async def premove(event):
@@ -244,5 +244,5 @@ async def ptest(event):
         await event.edit(f"{LANG['PLUGIN_BUGGED']} {e}`")
         return os.remove("./userbot/temp_plugins/" + dosya)
 
-    return await event.edit(f'**Modül başarıyla yüklendi!**\
+    return await event.edit(f'**Module loaded successfully!**\
     \n__Modül denemenizi yapabilirsiniz. Botu yeniden başlattığınız da plugin çalışmayacak.__')
