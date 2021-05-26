@@ -88,10 +88,10 @@ def extractCommands (file):
     if '/' in file:
         file = file.split ('/') [- 1]
 
-    Pattern = re.findall (r "@register \ (. * Pattern = (r |) \" (. *) \ ". * \)", FileRead)
+    Pattern = re.findall (r"@register\(.*Pattern=(r|)\"(.*)\".*\)", FileRead)
     Commands = []
 
-    if re.search (r'CmdHelp \ (. * \) ', FileRead):
+    if re.search (r'CmdHelp \ (.*\) ', FileRead):
         pass
     else:
         fileName = file.replace ('. py', '')
