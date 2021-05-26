@@ -297,7 +297,7 @@ with bot:
         @tgbot.on(NewMessage(pattern='/start'))
         async def start_bot_handler(event):
             if not event.message.from_id == uid:
-                await event.reply(f'`Hello I am @D3VIL_SUPPORT! I am the owner (`@{me.username}`)')
+                await event.reply(f'Hello I am @D3VIL_SUPPORT.)
             else:
                 await event.reply(f'`⚔️D3VILBOT IS working... ⚔️`')
 
