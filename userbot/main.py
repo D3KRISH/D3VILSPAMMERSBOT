@@ -65,10 +65,10 @@ AFKSTR = [
     "I'm not here right now .... \ n but if I am ... \ n \ n wouldn't that be great?",
 ]
 
-UNAPPROVED_MSG = ('' Hey, `{mention}`! This is a bot. Don't worry. \ N \ n` "
-                  `` My owner hasn't given you permission to PM. ''
-                  "Please wait for my owner to be active, he will usually confirm PMs. \ N \ n`"
-                  "As far as I know, he doesn't allow people to PM in a nutshell.")
+UNAPPROVED_MSG = ("`Hey, `{mention}`! This is a bot. Don't worry. \ N \ n` "
+                  "` My owner hasn't given you permission to PM. `"
+                  "`Please wait for my owner to be active, he will usually confirm PM.\n\n`"
+                  "`As far as I know, he doesn't allow people to PM in a nutshell.`")
 
 DB = connect ("learning-data-root.check")
 CURSOR = DB.cursor ()
